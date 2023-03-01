@@ -72,17 +72,6 @@ export const appRoutes: Route[] = [
                 path: 'permission',
                 canActivate: [], children: [
                     { path: '', loadChildren: () => import('app/modules/admin/g-admin/permission/permission.module').then(m => m.PermissionModule) },
-                    // { path: 'orders', loadChildren: () => import('app/modules/admin/marketing/orders/orders.module').then(m => m.OrdersModule) },
-                    // { path: 'expand-store-list', loadChildren: () => import('app/modules/admin/marketing/orders/expand-store-list/expand-store-list.module').then(m => m.ExpandStoreModule) },
-                    // {
-                    //     path: 'data', children: [
-                    //         { path: 'new-item-list-checking', loadChildren: () => import('app/modules/admin/marketing/new-item-list-checking/new-item-list-checking.module').then(m => m.NewItemListCheckingModule) },
-                    //         { path: 'assets-list', loadChildren: () => import('app/modules/admin/marketing/assets-list/assets-list.module').then(m => m.AssetsListModule) },
-                    //         { path: 'user', loadChildren: () => import('app/modules/admin/marketing/user/user.module').then(m => m.UserListModule) },
-                    //         { path: 'store', loadChildren: () => import('app/modules/admin/marketing/store/store.module').then(m => m.StoreModule) },
-                    //         { path: 'store-type', loadChildren: () => import('app/modules/admin/marketing/store-type/store-type.module').then(m => m.StoreTypeModule) },
-                    //     ]
-                    // },
                 ]
             },
             //user
@@ -90,18 +79,7 @@ export const appRoutes: Route[] = [
                 path: 'user',
                 canActivate: [], children: [
                     { path: '', loadChildren: () => import('app/modules/admin/g-admin/user/user.module').then(m => m.UserModule) },
-                    // { path: 'create-user', loadChildren: () => import('app/modules/admin/g-admin/user/create-user/create-user.component').then(m => m.UserModule) },
-                    // { path: 'orders', loadChildren: () => import('app/modules/admin/marketing/orders/orders.module').then(m => m.OrdersModule) },
-                    // { path: 'expand-store-list', loadChildren: () => import('app/modules/admin/marketing/orders/expand-store-list/expand-store-list.module').then(m => m.ExpandStoreModule) },
-                    // {
-                    //     path: 'data', children: [
-                    //         { path: 'new-item-list-checking', loadChildren: () => import('app/modules/admin/marketing/new-item-list-checking/new-item-list-checking.module').then(m => m.NewItemListCheckingModule) },
-                    //         { path: 'assets-list', loadChildren: () => import('app/modules/admin/marketing/assets-list/assets-list.module').then(m => m.AssetsListModule) },
-                    //         { path: 'user', loadChildren: () => import('app/modules/admin/marketing/user/user.module').then(m => m.UserListModule) },
-                    //         { path: 'store', loadChildren: () => import('app/modules/admin/marketing/store/store.module').then(m => m.StoreModule) },
-                    //         { path: 'store-type', loadChildren: () => import('app/modules/admin/marketing/store-type/store-type.module').then(m => m.StoreTypeModule) },
-                    //     ]
-                    // },
+
                 ]
             },
             {
@@ -122,12 +100,14 @@ export const appRoutes: Route[] = [
                     { path: '', loadChildren: () => import('app/modules/admin/g-admin/department/department.module').then(m => m.DepartmentModule) },
                 ]
             },
+
             {
                 path: 'position',
                 canActivate: [], children: [
                     { path: '', loadChildren: () => import('app/modules/admin/g-admin/position/position.module').then(m => m.PositionModule) },
                 ]
             },
+
             {
                 path: 'customer',
                 canActivate: [], children: [
@@ -278,6 +258,120 @@ export const appRoutes: Route[] = [
                     // },
                 ]
             },
+
+
+//////////website//////////
+
+
+            {
+                path: 'banner',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/banner/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'category',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/category/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'gallery',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/gallery/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'line',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/line/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'menu',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/menu/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'menus',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/menus/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'product',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/product/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'product-category',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/product-category/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'product-healty',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/product-healty/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'product-main',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/product-main/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'product-weight',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/product-weight/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'profile',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/profile/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'review',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/review/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'single-banner',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/single-banner/page.module').then(m => m.Module) },
+                ]
+            },
+
+
+            // {
+            //     path: 'video',
+            //     canActivate: [], children: [
+            //         { path: '', loadChildren: () => import('app/modules/admin/website/video/page.module').then(m => m.Module) },
+            //     ]
+            // },
+            {
+                path: 'youtube',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/youtube/page.module').then(m => m.Module) },
+                ]
+            },
+            {
+                path: 'youtube-best',
+                canActivate: [], children: [
+                    { path: '', loadChildren: () => import('app/modules/admin/website/youtube-best/page.module').then(m => m.Module) },
+                ]
+            },
+
+
+
+
+
 
 
 
