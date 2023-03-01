@@ -17,13 +17,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'bank',
                 title: 'บัญชีธนาคาร',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'mat_solid:money',
                 // link: '/user/list',
                 children: [
                     {
                         title: 'รายชื่อบัญชีธนาคาร',
                         type: 'basic',
-                        // icon: 'heroicons_outline:clipboard-check',
+                       
                         link: '/bank/list',
                         hidden: function () {
                             return AuthService._menu1; // must be a boolean value
@@ -53,7 +53,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'deposit-withdraw',
                 title: 'ธุรกรรมทางการเงิน',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'mat_solid:attach_money',
                 // link: '/user/list',
                 children: [
                     {
@@ -129,7 +129,9 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'user',
                 title: 'ผู้ใช้งาน',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                
+                
+                    icon: 'mat_solid:emoji_people',
                 // link: '/user/list',
                 children: [
                     {
@@ -210,7 +212,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'menu',
                 title: 'สิทธิ์การใช้งานเมนู',
                 type: 'basic',
-                // icon: 'heroicons_outline:lists',
+                icon: 'checklist_rtl',
                 link: '/menu/list',
                 hidden: function () {
                     return AuthService._admin; // must be a boolean value
@@ -220,7 +222,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'monk',
                 title: 'พระ',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'nature_people',
                 // link: '/user/list',
                 children: [
                     {
@@ -282,7 +284,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'sala',
                 title: 'ศาลา',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'feather:home',
                 // link: '/user/list',
                 children: [
                     {
@@ -331,7 +333,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'member',
                 title: 'สมาชิก',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'mat_solid:people_alt',
                 // link: '/user/list',
                 children: [
                     {
@@ -360,7 +362,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'location',
                 title: 'ห้องเก็บอุปกรณ์',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'heroicons_outline:lock-closed',
                 // link: '/user/list',
                 children: [
                     {
@@ -389,7 +391,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'item',
                 title: 'อุปกรณ์',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'mat_outline:rice_bowl',
                 // link: '/user/list',
                 children: [
                     {
@@ -430,7 +432,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'news',
                 title: 'ข่าวสาร',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'heroicons_outline:newspaper',
                 // link: '/user/list',
                 children: [
                     {
@@ -497,7 +499,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'gallery',
                 title: 'แกลลอรี่',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'mat_outline:picture_as_pdf',
                 // link: '/user/list',
                 children: [
                     {
@@ -564,7 +566,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: '',
                 title: 'วัตถุมงคล',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'heroicons_outline:sparkles',
                 // link: '/user/list',
                 children: [
                     {
@@ -605,7 +607,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'land',
                 title: 'จัดการที่ดิน',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'feather:map',
                 // link: '/user/list',
                 children: [
                     {
@@ -699,7 +701,8 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'stock-deposit',
                 title: 'ยืมอุปกรณ์',
                 type: 'collapsable',
-                // icon: 'heroicons_outline:clipboard-check',
+                icon: 'mat_outline:handyman',
+   
                 // link: '/user/list',
                 children: [
                     {
@@ -727,6 +730,142 @@ export const defaultNavigation: FuseNavigationItem[] = [
         ],
     },
 
+
+    {
+        id: 'website',
+        title: 'เว็บไซต์',
+        // subtitle: 'Admin',
+        type: 'group',
+        icon: 'heroicons_outline:view-grid',
+        // hidden: function () {
+        //     return AuthService._marketingRole; // must be a boolean value
+        // },
+        children: [
+            {
+                id: 'stock-deposit',
+                title: 'จัดการเว็ปไซต์',
+                type: 'collapsable',
+                icon: 'feather:edit',
+                // link: '/user/list',
+                children: [
+                    {
+                        id: 'banner',
+                        title: 'แบนเนอร์',
+                        type: 'basic',
+                        link: '/banner/list',
+                    },
+                    {
+                        id: 'single-banner',
+                        title: 'แบนเนอร์เดี่ยว',
+                        type: 'basic',
+                        link: '/single-banner/list',
+                    }, 
+                    {
+                        id: 'category',
+                        title: 'หมวดหมู่คอร์ส',
+                        type: 'basic',
+                        link: '/category/list',
+                    },
+                    {
+                        id: 'gallery',
+                        title: 'แกลลอลี่',
+                        type: 'basic',
+                        link: '/gallery/list',
+                    },
+                    {
+                        id: 'line',
+                        title: 'Line',
+                        type: 'basic',
+                        link: '/line/list',
+                    },
+                    {
+                        id: 'menu',
+                        title: 'เมนู',
+                        type: 'basic',
+                        link: '/menu-customer/list',
+                    },                   
+                    {
+                        id: 'menus',
+                        title: 'เมนูหลัก',
+                        type: 'basic',
+                        link: '/menus/list',
+                    },                   
+                    {
+                        id: 'product',
+                        title: 'สินค้าทั้งหมด',
+                        type: 'basic',
+                        link: '/product/list',
+                    },                   
+                    {
+                        id: 'product-category',
+                        title: 'หมวดหมู่สินค้า',
+                        type: 'basic',
+                        link: '/product-category/list',
+                    }, 
+                    {
+                        id: 'product-healty',
+                        title: 'สินค้าเพื่อสุขภาพ',
+                        type: 'basic',
+                        link: '/product-healty/list',
+                    }, 
+                    {
+                        id: 'product-main',
+                        title: 'สินค้าหลัก',
+                        type: 'basic',
+                        link: '/product-main/list',
+                    }, 
+                    {
+                        id: 'product-weight',
+                        title: 'สินค้าเพื่อการลดน้ำหนัก',
+                        type: 'basic',
+                        link: '/product-weight/list',
+                    }, 
+                    {
+                        id: 'profile',
+                        title: 'โปรไฟล์',
+                        type: 'basic',
+                        link: '/profile/list',
+                    }, 
+                    {
+                        id: 'review',
+                        title: 'อัลบั้มรูปภาพ',
+                        type: 'basic',
+                        link: '/review/list',
+                    }, 
+
+                    // {
+                    //     id: 'user',
+                    //     title: 'ผู้ใช้',
+                    //     type: 'basic',
+                    //     link: '/user/list',
+                    // }, 
+                    // {
+                    //     id: 'video',
+                    //     title: 'วีดีโอ',
+                    //     type: 'basic',
+                    //     link: '/video/list',
+                    // }, 
+                    {
+                        id: 'youtube',
+                        title: 'รายการวีดีโอยูทูบ',
+                        type: 'basic',
+                        link: '/youtube/list',
+                    }, 
+                    {
+                        id: 'youtube-best',
+                        title: 'รายการวีดีโอยูทูบสินค้าขายดี',
+                        type: 'basic',
+                        link: '/youtube-best/list',
+                    },                   
+
+
+
+                ],
+            },
+        ],
+    },
+
+
     {
         id: 'account',
         title: 'บัญชีผู้ใช้',
@@ -743,6 +882,8 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'user-signout',
                 title: 'ออกจากระบบ',
                 type: 'basic',
+                icon: 'exit_to_app',
+                
                 link: '/sign-out',
             },
         ],
