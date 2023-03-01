@@ -6,8 +6,8 @@ export const environment = {
     production: false,
     // API_URL: 'http://localhost:9080/wmk-api/public/',
     // API_URL: 'https://asha-dev.com/wmk-api/public/',
-    // API_URL: 'https://wmk1.net/api/public/',
-    API_URL: 'https://worldstarthailand.online/ws-api/public',
+    API_URL: 'https://wmk1.net/api/public/',
+    // API_URL: 'https://worldstarthailand.online/ws-api/public',
 };
 
 /*
