@@ -876,6 +876,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id: 'settings',
                 title: 'โปรไฟล์',
                 type: 'basic',
+                icon: 'feather:user',
                 link: '/user/profile',
             },
             {

@@ -81,10 +81,11 @@
         <div class="flex flex-col flex-auto p-5 overflow-hidden sm:overflow-y-auto">
             <div class="row">
                 <div class="col mb-4 text-right">
-                    <button type="button" class="btn btn-danger" (click)="genPDF()">
+                    <label>บันทึกไฟล์ข้อมูล  </label>
+                    <button type="button" class="btn btn-danger" mat-flat-button (click)="genPDF()">
                         <i class="fa fa-file-pdf"> PDF</i>
                     </button> &nbsp;
-                    <button type="button" class="btn btn-success" (click)="genExcel()">
+                    <button type="button" class="btn btn-success" mat-flat-button (click)="genExcel()">
                         <i class="fa fa-file-excel"> Excel</i>
                     </button>
                 </div>
