@@ -92,6 +92,8 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
     //     return 'marketing';
     // }
 
+    checkall: any;
+
     supplierId: string | null;
     pagination: any;
 
@@ -137,7 +139,6 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     NewMenu(item: any): FormGroup {
-
         // let view = false;
         // let add = false;
         // let edit = false;
@@ -162,9 +163,8 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
         const arr = [];
         var check = true;
         item.Menus.forEach((element) => {
-
-            this.itemData.menu_permission.forEach(element2 => {
-                if(element2.menu_id == element.id){
+            this.itemData.menu_permission.forEach((element2) => {
+                if (element2.menu_id == element.id) {
                     check = false;
                 }
             });
@@ -256,7 +256,6 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
         confirmation.afterClosed().subscribe((result) => {
             // If the confirm button pressed...
             if (result === 'confirmed') {
-                console.log(this.formData.value);
                 // Disable the form
                 this.formData.disable();
                 this._Service
@@ -355,13 +354,33 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
         });
     }
 
-    actionChange(event, i, j): void {
+    actionChangeAll(): void {
+        if (this.checkall == true) {
+            this.checkall = false;
+        } else {
+            this.checkall = true;
+        }
 
+        for (var i = 0; i <= this.menu().length - 1; i++) {
+            const mainmenu = this.menu().at(i).get('menus') as FormArray;
+
+            for (var j = 0; j <= mainmenu.length - 1; j++) {
+                if (this.checkall == true) {
+                    mainmenu.at(j).value.checked = false;
+                } else {
+                    mainmenu.at(j).value.checked = true;
+                }
+            }
+        }
+        return;
+    }
+
+    actionChange(event, i, j): void {
         let array;
         array = {
             user_id: this.formData.value.user_id,
             menu_id: this.MenuData[i].Menus[j].id,
-            actions: "View",
+            actions: 'View',
         };
 
         const mainmenu = this.menu().at(i).get('menus') as FormArray;
