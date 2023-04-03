@@ -675,7 +675,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
                             },
                             {
                                 id: 'new-land',
-                                title: 'เพิ่มกิจเช่าที่ดิน',
+                                title: 'เพิ่มกิจกรรมเช่าที่ดิน',
                                 type: 'basic',
                                 // icon: 'heroicons_outline:clipboard-check',
                                 link: '/rent-land/new',
