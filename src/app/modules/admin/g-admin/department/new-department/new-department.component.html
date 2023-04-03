@@ -1,8 +1,7 @@
 <div class="flex flex-col flex-auto min-w-0 bg-card dark:bg-transparent">
 
     <!-- Header -->
-    <div
-        class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
+    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
         <div class="flex-1 min-w-0">
             <!-- Title -->
             <div class="mt-2">
@@ -26,7 +25,7 @@
                         <!-- name -->
 
                         <div class="flex p-5">
-                            <mat-form-field class="w-3/12 pr-2">
+                            <mat-form-field class="w-full pr-2">
                                 <mat-label>ชื่อแผนก</mat-label>
                                 <input matInput [formControlName]="'name'">
                             </mat-form-field>
@@ -41,7 +40,7 @@
                         <mat-icon svgIcon="heroicons_solid:x"></mat-icon>
                         ยกเลิก
                     </a>
-                    <button class="px-6 ml-3 mat-primary" mat-flat-button (click)="createNewBranch()">
+                    <button class="px-6 ml-3 mat-primary" mat-flat-button (click)="create()">
                         <mat-icon svgIcon="heroicons_solid:check"></mat-icon>
                         ยืนยัน
                     </button>

@@ -144,7 +144,7 @@ export class NewDepartmentComponent implements OnInit, AfterViewInit, OnDestroy 
     }
 
 
-    createNewBranch(): void {
+    create(): void {
         this.flashMessage = null;
         this.flashErrorMessage = null;
         // Return if the form is invalid

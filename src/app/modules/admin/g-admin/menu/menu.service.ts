@@ -494,13 +494,24 @@ export class MenuService {
     }
 
     setPermissionMenu(data: any): Observable<any> {
-        // Throw error, if the user is already logged in
-        //  if (this._authenticated) {
-        //     return throwError('User is already logged in.');
-        // }
         return this._httpClient
             .post(
                 environment.API_URL + 'api/menu_permission',
+                data,
+                this.httpOptionsFormdata
+            )
+            .pipe(
+                switchMap((response: any) => {
+                    // Return a new observable with the response
+                    return of(response);
+                })
+            );
+    }
+    
+    setPermissionAll(data: any): Observable<any> {
+        return this._httpClient
+            .post(
+                environment.API_URL + 'api/checkAll',
                 data,
                 this.httpOptionsFormdata
             )

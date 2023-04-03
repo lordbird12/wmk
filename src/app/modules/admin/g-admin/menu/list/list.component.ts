@@ -372,7 +372,24 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
                 }
             }
         }
-        return;
+
+        let array;
+
+        if (this.checkall == true) {
+            array = {
+                user_id: this.formData.value.user_id,
+                check: false,
+            };
+        } else {
+            array = {
+                user_id: this.formData.value.user_id,
+                check: true,
+            };
+        }
+
+        this._Service.setPermissionAll(array).subscribe((resp: any) => {
+            this._changeDetectorRef.markForCheck();
+        });
     }
 
     actionChange(event, i, j): void {
